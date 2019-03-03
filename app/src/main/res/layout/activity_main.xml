@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1.0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.devld.Realtime_Load_Monitor_Controller.MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_weight="80"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bg_screen"
+        android:gravity="center_horizontal|center_vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:weightSum="100"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_weight="50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--.-- A"
+                android:textSize="16sp"
+                android:id="@+id/txtAmp"
+                android:textColor="@color/turnOnColor"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:layout_weight="50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--.-- W"
+                android:textSize="16sp"
+                android:id="@+id/txtWatt"
+                android:textColor="@color/turnOnColor"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_horizontal"
+        android:weightSum="100"
+        >
+        <TextView
+            android:layout_weight="50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--.-- W⋅H"
+            android:textSize="16sp"
+            android:id="@+id/txtKWH1"
+            android:textColor="@color/turnOnColor"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_weight="50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(فلس)--.--"
+            android:textSize="16sp"
+            android:id="@+id/txtCost"
+            android:textColor="@color/turnOnColor"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lightbulb_outline_black_24dp"
+            android:id="@+id/lightBulb1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:orientation="vertical"
+            android:gravity="center">
+        <Button
+            android:id="@+id/main_send_btn"
+            android:enabled="false"
+            android:text="ON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corners"
+            android:layout_marginBottom="3dp"
+            />
+        <Button
+            android:id="@+id/btn_off"
+            android:enabled="false"
+            android:text="OFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corners"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="80"
+        android:background="@drawable/gradient_bg_screen"
+        android:gravity="center_horizontal|center_vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_horizontal"
+                android:weightSum="100"
+                >
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--.-- A"
+                    android:textSize="16sp"
+                    android:id="@+id/txtAmp2"
+                    android:textColor="@color/turnOnColor"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_weight="50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--.-- W"
+                    android:textSize="16sp"
+                    android:id="@+id/txtWatt2"
+                    android:textColor="@color/turnOnColor"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_horizontal"
+        android:weightSum="100"
+        >
+        <TextView
+            android:layout_weight="50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--.-- W⋅H"
+            android:textSize="16sp"
+            android:id="@+id/txtKWH2"
+            android:textColor="@color/turnOnColor"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_weight="50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(فلس)--.--"
+            android:textSize="16sp"
+            android:id="@+id/txtCost2"
+            android:textColor="@color/turnOnColor"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lightbulb_outline_black_24dp"
+            android:id="@+id/lightBulb2"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_On2"
+            android:text="ON"
+            android:background="@drawable/round_corners"
+            android:layout_marginBottom="3dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Off2"
+            android:text="OFF"
+            android:background="@drawable/round_corners"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_weight="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/main_logview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="Status"
+            />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginBottom="5dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_fundsThreshold"
+                android:text="Set L1"
+                android:textSize="10sp"
+                android:background="@drawable/round_corners"
+                android:layout_marginRight="20dp"/>
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/edtFunds"
+                android:textSize="15sp"
+                android:layout_weight="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert price limit"
+                android:textColor="@color/textColor"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_fundsThreshold2"
+                android:text="Set L2"
+                android:textSize="10sp"
+                android:background="@drawable/round_corners"
+                android:layout_marginRight="20dp"/>
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/edtFunds2"
+                android:textSize="15sp"
+                android:layout_weight="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert price limit"
+                android:textColor="@color/textColor"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtTimer1"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                android:hint="Insert seconds"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start 1"
+                android:id="@+id/btnTimer1"
+                android:background="@drawable/round_corners"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFirstCounter"
+                android:text="Time Remaining"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtTimer2"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                android:hint="Insert seconds"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start 2"
+                android:id="@+id/btnTimer2"
+                android:background="@drawable/round_corners"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSecondCounter"
+                android:text="Time Remaining"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_the_app"
+            android:textStyle="italic|bold"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/txtAboutTheApp"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:id="@+id/main_cmdview"
+            android:layout_weight="1.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <Spinner
+            android:id="@+id/sp_br"
+            android:entries="@array/sp_brs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
